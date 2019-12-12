@@ -44,8 +44,7 @@
 	</insert>
 
 	<select id="findAll" resultMap="BaseResultMap">
-		select * from user order by id
-		asc
+		select * from user order by id asc
 	</select>
 
 	<delete id="deleteAll">
@@ -53,13 +52,11 @@
 	</delete>
 
 	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-		delete from user
-		where id=#{id,jdbcType=INTEGER}
+		delete from user where id=#{id,jdbcType=INTEGER}
 	</delete>
 
 	<select id="selectByPrimaryKey" resultMap="BaseResultMap">
-		select * from user
-		where id=#{id,jdbcType=INTEGER}
+		select * from user where id=#{id,jdbcType=INTEGER}
 	</select>
 
 </mapper>
